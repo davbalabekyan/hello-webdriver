@@ -1,5 +1,6 @@
 package configurations.core;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,9 +14,10 @@ public class DriverProvider {
     public static WebDriver getDriver() {
         if (driver == null) {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--incognito");
+            options.addArguments("-private");
             options.addArguments("--start-maximized");
 
+            WebDriverManager.firefoxdriver().setup();
             driver = new ChromeDriver(options);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }

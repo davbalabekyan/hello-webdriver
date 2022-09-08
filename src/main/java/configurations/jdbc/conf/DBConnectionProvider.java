@@ -10,7 +10,6 @@ public class DBConnectionProvider {
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "davodavo";
     private static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
-
     private volatile static DBConnectionProvider instance;
     private static Connection connection;
 
