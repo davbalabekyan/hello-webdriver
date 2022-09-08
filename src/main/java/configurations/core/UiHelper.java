@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class UiHelper {
 
-    private static final WebDriver driver = Driver.getDriver();
+    private static final WebDriver driver = DriverProvider.getDriver();
     private static final JavascriptExecutor js = (JavascriptExecutor) driver;
 
     private UiHelper() {

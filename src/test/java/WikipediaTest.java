@@ -1,4 +1,4 @@
-import configurations.core.Driver;
+import configurations.core.DriverProvider;
 import configurations.properties.WikipediaPropertiesConfiguration;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -58,7 +58,7 @@ public class WikipediaTest extends BaseTest {
         loginPage.login();
         profilePage.searchArticle();
         profilePage.goToMainPage();
-        Assert.assertEquals("https://en.wikipedia.org/wiki/Main_Page", Driver.getDriver().getCurrentUrl());
+        Assert.assertEquals("https://en.wikipedia.org/wiki/Main_Page", DriverProvider.getDriver().getCurrentUrl());
     }
 
     @Test

@@ -11,7 +11,7 @@ import java.util.List;
 
 public class WaitHelper {
 
-    private static final WebDriver driver = Driver.getDriver();
+    private static final WebDriver driver = DriverProvider.getDriver();
     private static final Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     private WaitHelper() {

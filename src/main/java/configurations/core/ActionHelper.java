@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class ActionHelper {
 
-    private static final WebDriver driver = Driver.getDriver();
+    private static final WebDriver driver = DriverProvider.getDriver();
     private static final Actions actions = new Actions(driver);
 
     private ActionHelper() {

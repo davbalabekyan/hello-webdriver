@@ -1,4 +1,4 @@
-import configurations.core.Driver;
+import configurations.core.DriverProvider;
 import configurations.jdbc.conf.DBConnectionProvider;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -11,12 +11,12 @@ public class BaseTest {
 
     @BeforeSuite
     public void setup() {
-        Driver.getDriver();
+        DriverProvider.getDriver();
         connection = DBConnectionProvider.getInstance().getConnection();
     }
 
     @AfterSuite
     public void tearDown() {
-        Driver.quitDriver();
+        DriverProvider.quitDriver();
     }
 }
